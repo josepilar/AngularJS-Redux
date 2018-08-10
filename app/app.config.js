@@ -21,6 +21,6 @@ export default function config($stateProvider, $locationProvider, $httpProvider,
     $ngReduxProvider.createStoreWith(
         RootReducer,
         [thunkMiddleware, createLogger(createLoggerConfigObject)],
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+        [window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()]
     );
 }
