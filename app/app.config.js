@@ -1,4 +1,4 @@
-import {RootReducer} from './reducers';
+import {AppReducer} from './reducers';
 import {createLogger} from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
 
@@ -19,7 +19,7 @@ export default function config($stateProvider, $locationProvider, $httpProvider,
     };
 
     $ngReduxProvider.createStoreWith(
-        RootReducer,
+        AppReducer,
         [thunkMiddleware, createLogger(createLoggerConfigObject)],
         [window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()]
     );
