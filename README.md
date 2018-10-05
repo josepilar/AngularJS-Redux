@@ -1,4 +1,4 @@
-# csg interview test boilerplate
+# Angular + Redux boilerplate
 
 TODO:
 - Installation guide
