@@ -1,9 +1,15 @@
 <div class="container">
-    <h1>CSGI Challenge</h1>
-    <button class="btn btn-primary" type="button" ng-click="$ctrl.retrievePosts()">Retrieve Posts</button>
-    <div>
-        <ul>
-            <li ng-repeat="post in $ctrl.state.postsList track by post.id">{{post.title}}</li>
-        </ul>
-    </div>
+    <div class="card">
+        <div class="card-header text-center">
+            <h2>TEST</h2>
+        </div>
+        <div class="card-body">
+            <button class="btn btn-primary col align-self-end" type="button" ng-click="$ctrl.retrievePosts()">Retrieve Posts</button>
+            <div>
+                <ul>
+                    <li ng-repeat="post in $ctrl.state.postsList track by post.id">{{post.title}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>    
 </div>

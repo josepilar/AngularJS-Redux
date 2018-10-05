@@ -1,5 +1,5 @@
 import angular from 'angular';
-import uiRouter from 'angular-ui-router';
+import uiRouter from '@uirouter/angularjs';
 import ngRedux from 'ng-redux';
 import ngReduxUiRouter from 'redux-ui-router';
 
@@ -12,5 +12,5 @@ export default angular.module('app', [
     ngReduxUiRouter
 ])
     .config(config)
-    .component('interviewApp', AppComponent)
+    .component('app', AppComponent)
     .name;

@@ -1,4 +1,4 @@
-{
+  {
     "posts": [
       { "id": 1, "title": "json-server", "author": "typicode" },
       { "id": 2, "title": "redux-thunk", "author": "un vato" },
