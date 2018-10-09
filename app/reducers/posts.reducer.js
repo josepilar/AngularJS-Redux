@@ -13,7 +13,7 @@ export const INITIAL_STATE = Immutable({
     isFetching: false
 });
 
-export default function postReducer(state = INITIAL_STATE, {type, payload = {}}) {
+export default function postReducer(state = INITIAL_STATE, {type = '', payload = {}}) {
     switch (type) {
         case RETRIEVE_RANDOM_KITTY.BEGIN:
         case LIKE_RANDOM_KITTY.BEGIN:
@@ -30,18 +30,18 @@ export default function postReducer(state = INITIAL_STATE, {type, payload = {}})
         case RETRIEVE_RANDOM_KITTY.SUCCESS:
             return state
                 .set('currentKitty', payload.image)
-                .set('isFetching', false)
+                .set('isFetching', false);
         case LIKE_RANDOM_KITTY.SUCCESS:
             return state
-                .set('isFetching', false)
+                .set('isFetching', false);
         case RETRIEVE_FAV_KITTIES.SUCCESS:
             return state
                 .set('favs', payload.images)
-                .set('isFetching', false)
+                .set('isFetching', false);
         case REMOVE_FAV_KITTY.SUCCESS:
             return state
                 .set('favs', payload)
-                .set('isFetching', false)
+                .set('isFetching', false);
         default:
             return state;
     }

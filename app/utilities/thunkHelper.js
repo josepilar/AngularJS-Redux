@@ -35,7 +35,7 @@ export default function thunkHelper(dispatch, types, config) {
     return deferred.promise;
 }
 
-const getInjector = () => {
+export const getInjector = () => {
     return angular.element(document.querySelector('[ng-app]') || document.querySelector('[ng-controller]')).injector();
 };
 const getService = (service) => {
