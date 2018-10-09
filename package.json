@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --port 8081",
     "build": "webpack --mode production",
-    "test": "mocha-webpack --webpack-config webpack.config.test.js \"spec/**/*.spec.js\"",
+    "test": "mocha-webpack --webpack-config webpack.config.test.js \"app/spec/**/*.spec.js\"",
     "start:server": "json-server --watch ./db/db.json --port 3004"
   },
   "author": "A bunch of nerds",
@@ -26,7 +26,7 @@
     "mini-css-extract-plugin": "^0.4.3",
     "mocha": "^5.2.0",
     "mocha-loader": "^2.0.0",
-    "mocha-webpack": "^1.1.0",
+    "mocha-webpack": "^2.0.0-beta.0",
     "node-sass": "^4.9.3",
     "postcss-loader": "^2.1.6",
     "redux-devtools-extension": "^2.13.5",
