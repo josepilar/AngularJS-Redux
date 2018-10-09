@@ -1,0 +1,14 @@
+<div class="container">
+        <nav class="tabs">
+                <a class="tab-item" ui-sref='app' ng-class="{'active': favsCtrl.$state.current.name ==='app'}">Home</a>
+                <a class="tab-item" ui-sref='favs' ng-class="{'active': favsCtrl.$state.current.name ==='favs'}">Favs</a>
+        </nav>
+        <h1 class="title">Favorites</h1>
+        <section class="favs">
+            <div class="fav-kitty" ng-repeat="kitty in favsCtrl.state.favs track by kitty.id">
+                    <img class="current-kitty" 
+                    ng-src="{{kitty.url}}" alt="loading..."/>
+                    <button class="remove-fav" ng-click="favsCtrl.removeFav(kitty.id)">𝗫</button>
+            </div>
+        </section>
+</div>

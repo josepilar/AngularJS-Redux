@@ -1,0 +1,56 @@
+.title {
+    margin-top: 50px;
+}
+
+.favs{
+    width: 100%;
+    margin-top: 30px;
+    padding: 0px, 10%, 0px, 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .fav-kitty {
+        width: 200px;
+        height: 200px;
+        margin: 0 6px 6px 0;
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        position: relative;
+        
+        .remove-fav {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            border: 0;
+
+            &:active {
+                border: solid 2px;
+            }
+
+            &:hover {
+                background-color: rgb(184, 0, 0);
+            }
+        }
+    }
+
+    @media (max-width: 550px) {
+        .fav-kitty {
+            width: 130px;
+            height: 130px;
+            margin: 0 6px 6px 0;
+            img {
+                width: 130px;
+                height: 130px;
+            }
+        }
+    }
+}

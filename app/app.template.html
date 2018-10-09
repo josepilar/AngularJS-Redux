@@ -1,15 +1,20 @@
 <div class="container">
-    <div class="card">
-        <div class="card-header text-center">
-            <h2>TEST</h2>
+    <nav class="tabs">
+        <a class="tab-item" ui-sref='app' ng-class="{'active': tinKittyCtrl.$state.current.name ==='app'}">Home</a>
+        <a class="tab-item" ui-sref='favs' ng-class="{'active': tinKittyCtrl.$state.current.name ==='favs'}">Favs</a>
+    </nav>
+
+    <section class="home">
+        <div class="card">
+            <div class="current-kitty">
+                    <img ng-if="tinKittyCtrl.state.currentKitty.url" 
+                    ng-src="{{tinKittyCtrl.state.currentKitty.url}}" alt="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"/>
+                </div>
+            
+                <div class="actions">
+                    <button class="action-button dismiss" title="dismiss"  ng-click="tinKittyCtrl.loadRandomKitty()">𝗫</button>
+                    <button class="action-button like" title="like" ng-click="tinKittyCtrl.likeKitty()">❤</button>
+                </div>
         </div>
-        <div class="card-body">
-            <button class="btn btn-primary col align-self-end" type="button" ng-click="$ctrl.retrievePosts()">Retrieve Posts</button>
-            <div>
-                <ul>
-                    <li ng-repeat="post in $ctrl.state.postsList track by post.id">{{post.title}}</li>
-                </ul>
-            </div>
-        </div>
-    </div>    
+    </section>
 </div>
